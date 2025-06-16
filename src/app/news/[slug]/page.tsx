@@ -1,6 +1,6 @@
-import { ArticleDisplay } from "@/components/ArticleDisplay"; // Import the new Client Component
-import Link from "next/link"; // Link is safe in Server Components
-import { ArrowLeftIcon } from "@heroicons/react/24/outline"; // Icon is fine here too, as it's not interactive
+import { ArticleDisplay } from "@/components/ArticleDisplay";
+import Link from "next/link";
+import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 
 // This function simulates fetching article data based on the slug.
 // It can be an async function as this is a Server Component.
@@ -134,12 +134,15 @@ const getArticleBySlug = async (slug: string) => {
   return articles.find((article) => article.slug === slug);
 };
 
+// Define the type for the props explicitly using PageProps
+interface ArticlePageProps {
+  params: {
+    slug: string;
+  };
+}
+
 // This is an async Server Component, which is allowed and ideal for data fetching
-export default async function ArticlePage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default async function ArticlePage({ params }: ArticlePageProps) {
   const article = await getArticleBySlug(params.slug);
 
   if (!article) {
