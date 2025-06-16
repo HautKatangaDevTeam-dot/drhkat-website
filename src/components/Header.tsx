@@ -3,11 +3,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 export const Header = () => {
-  // Assume a state or prop for new news. For now, a simple boolean.
-  // In a real app, this might come from context, a global state manager,
-  // or a server-side check.
-  const hasNewNews = true; // Set to true for demonstration. Change to false or dynamic value.
-
   const navItems = [
     { name: "Services", href: "#services" },
     { name: "Nos Bureaux", href: "#offices" },
@@ -65,21 +60,7 @@ export const Header = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 * navItems.length, duration: 0.3 }} // Adjust delay to animate after other nav items
           className="relative" // Make parent relative for absolute positioning of badge
-        >
-          <Link
-            href="/news" // This will be your dedicated news/blog page
-            className="relative group px-4 py-3 text-sm font-medium transition-colors duration-300 hover:text-blue-700 flex items-center" // Added flex for icon alignment
-          >
-            <span className="relative z-10">Actualités</span>
-            {hasNewNews && (
-              <span className="absolute top-2 right-1 transform -translate-y-1/2 translate-x-1/2 bg-red-500 rounded-full h-2.5 w-2.5 flex items-center justify-center animate-pulse">
-                {/* Optional: Add a small dot or count here */}
-                {/* <span className="text-white text-xs font-bold leading-none">!</span> */}
-              </span>
-            )}
-            <span className="absolute bottom-2 left-1/2 w-0 h-0.5 bg-blue-700 transition-all duration-300 group-hover:w-4/5 group-hover:left-[10%]"></span>
-          </Link>
-        </motion.div>
+        ></motion.div>
       </nav>
 
       {/* Mobile Menu Button */}
