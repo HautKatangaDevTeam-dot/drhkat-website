@@ -129,7 +129,7 @@ export default function HomePage() {
                 Accéder à EDRHKAT
               </Link>
               <Link
-                href="https://reporting.drhkat.cd" // Replace with actual Reporting Platform domain
+                href="https://drhkat-tech.com/etaxedrhkat/appi2_Login/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-200 hover:text-white transition-colors duration-200 text-md"

@@ -174,7 +174,6 @@ export const OfficesSection = () => (
         </motion.div>
       </div>
 
-      {/* Optional: Embed a simple map or link to a map */}
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -189,8 +188,8 @@ export const OfficesSection = () => (
           Utilisez notre carte interactive pour des directions précises vers
           n&apos;importe lequel de nos bureaux.
         </p>
-        <Link // Now correctly imported
-          href="https://www.google.com/maps/search/Direction+des+Recettes+Haut-Katanga" // Generic search or embed a specific map later
+        <Link
+          href="https://maps.app.goo.gl/7AHWQfzvRZ6m7vbV7"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-opacity-75"

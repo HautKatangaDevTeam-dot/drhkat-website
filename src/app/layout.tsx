@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script"; // Import the Script component
 import "./globals.css";
 
 const geistSans = Geist({
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     title: "Direction des Recettes du Haut-Katanga (DRHKAT)",
     description:
       "Mobilisation efficace des recettes fiscales pour le développement socio-économique durable de notre province.",
-    creator: "@HautKatangaDevTeam", // If you have a Twitter handle
+    creator: "@HautKatangaDevTeam",
   },
 };
 
@@ -65,6 +66,15 @@ export default function RootLayout({
         <link rel="icon" href="favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/favicon.png" />
+        {/* Use next/script with afterInteractive strategy */}
+        <Script
+          src="https://cdn.botpress.cloud/webchat/v2.5/inject.js"
+          strategy="afterInteractive"
+        />
+        <Script
+          src="https://files.bpcontent.cloud/2025/05/23/15/20250523150619-0T8KL549.js"
+          strategy="afterInteractive"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
