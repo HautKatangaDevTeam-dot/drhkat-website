@@ -1,3 +1,4 @@
+// components/HeroContent.tsx
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -62,27 +63,26 @@ export const HeroContent = () => {
             Mobilisation efficace des recettes fiscales pour le développement
             socio-économique durable de notre province.
           </p>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            {/* EDRHKAT Platform Button */}
+            {/* Primary Call to Action: Taxpayer Services */}
             <Link
-              href="https://ushurutrack-gold.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#services" // Link to your Taxpayer Services section
               className="relative inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-blue-700 hover:to-blue-800 group"
             >
-              <span>Accéder à EDRHKAT</span>
+              <span>Découvrir Nos Services</span>
               <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">
-                &rarr;
+                →
               </span>
               <span className="absolute inset-0 border-2 border-transparent group-hover:border-white/30 rounded-xl transition-all duration-300 pointer-events-none"></span>
             </Link>
 
-            {/* Reporting Platform Button (placeholder) */}
+            {/* Secondary Call to Action: Legal Texts */}
             <Link
-              href="#"
+              href="#laws" // Link to your Laws Section
               className="relative inline-flex items-center justify-center border-2 border-blue-600 text-blue-700 hover:bg-blue-50/50 px-8 py-4 rounded-xl font-semibold shadow-md hover:shadow-lg transition-all duration-300 group"
             >
-              <span>Plateforme d&apos;Apurement</span>
+              <span>Consulter les Textes Légaux</span>
               <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -103,12 +103,12 @@ export const HeroContent = () => {
 
           <div className="mt-12 flex flex-wrap justify-center lg:justify-start gap-4">
             {[
-              "Authentification sécurisée",
-              "Chiffrement des données",
-              "Analyses en temps réel",
-            ].map((feature, index) => (
+              "Transparence garantie", // Transparency guaranteed
+              "Démarches simplifiées", // Simplified procedures
+              "Soutien au développement", // Support for development
+            ].map((benefit, index) => (
               <motion.div
-                key={feature}
+                key={benefit}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 + index * 0.1 }}
@@ -127,13 +127,13 @@ export const HeroContent = () => {
                     d="M5 13l4 4L19 7"
                   ></path>
                 </svg>
-                {feature}
+                {benefit}
               </motion.div>
             ))}
           </div>
         </motion.div>
 
-        {/* Image Collage */}
+        {/* Image Collage (This part remains unchanged as it's visual) */}
         <motion.div
           variants={containerVariants}
           initial="hidden"

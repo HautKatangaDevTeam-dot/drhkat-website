@@ -1,5 +1,4 @@
 "use client";
-import { AgentPlatformSection } from "@/components/AgentPlatformSection";
 import { FutureServicesSection } from "@/components/FutureServicesSection";
 import { HeroSection } from "@/components/HeroSection";
 import { LawsSection } from "@/components/LawsSection";
@@ -19,9 +18,8 @@ export default function HomePage() {
       <TaxpayerServices />
       <OfficesSection />
       <LawsSection />
-      <AgentPlatformSection />
+      {/* <PublicResourcesSection /> */}
       <FutureServicesSection />
-
       {/* --- Footer Section --- */}
       <footer className="bg-gradient-to-r from-blue-950 to-blue-800 text-white py-12 md:py-16">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
@@ -29,7 +27,6 @@ export default function HomePage() {
           <div className="md:col-span-1 flex flex-col items-start">
             <Link href="/" className="mb-4 flex items-center gap-3">
               <div className="relative w-12 h-12 flex-shrink-0">
-                {" "}
                 {/* Wrapper for circular image */}
                 <Image
                   src="/ED-logo.jpeg"
@@ -83,7 +80,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Useful Links */}
+          {/* Useful Links (Existing Public Navigation) */}
           <div className="md:col-span-1">
             <h3 className="text-xl font-semibold mb-5 text-blue-100">
               Navigation
@@ -107,12 +104,7 @@ export default function HomePage() {
               >
                 Textes Légaux
               </Link>
-              <Link
-                href="#agent-platform"
-                className="text-blue-200 hover:text-white transition-colors duration-200 text-md"
-              >
-                Espace Agent
-              </Link>
+              {/* No more direct link to #agent-platform if the section is removed */}
               <Link
                 href="#contact"
                 className="text-blue-200 hover:text-white transition-colors duration-200 text-md"
@@ -122,37 +114,35 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Social Media / Other Links (New Column) */}
+          {/* NEW: Agent Links Section in Footer */}
           <div className="md:col-span-1">
             <h3 className="text-xl font-semibold mb-5 text-blue-100">
-              Suivez-nous
+              Espace Agent
             </h3>
             <div className="flex flex-col gap-3">
-              <a
-                href="https://twitter.com/drhkat_official"
+              <Link
+                href="https://ushurutrack-gold.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-200 hover:text-white transition-colors duration-200 text-md"
               >
-                Twitter
-              </a>
-              <a
-                href="https://facebook.com/drhkat_official"
+                Accéder à EDRHKAT
+              </Link>
+              <Link
+                href="https://reporting.drhkat.cd" // Replace with actual Reporting Platform domain
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-200 hover:text-white transition-colors duration-200 text-md"
               >
-                Facebook
-              </a>
-              <a
-                href="https://linkedin.com/company/drhkat"
-                target="_blank"
-                rel="noopener noreferrer"
+                Plateforme de Reporting
+              </Link>
+              {/* You could add a support link here if needed */}
+              <Link
+                href="mailto:support@drhkat.cd"
                 className="text-blue-200 hover:text-white transition-colors duration-200 text-md"
               >
-                LinkedIn
-              </a>
-              {/* Add more social links as needed */}
+                Support Agent
+              </Link>
             </div>
           </div>
         </div>

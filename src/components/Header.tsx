@@ -3,11 +3,15 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 export const Header = () => {
+  // Assume a state or prop for new news. For now, a simple boolean.
+  // In a real app, this might come from context, a global state manager,
+  // or a server-side check.
+  const hasNewNews = true; // Set to true for demonstration. Change to false or dynamic value.
+
   const navItems = [
     { name: "Services", href: "#services" },
     { name: "Nos Bureaux", href: "#offices" },
     { name: "Lois & Régulations", href: "#laws" },
-    { name: "Actualités", href: "#news" },
   ];
 
   return (
@@ -47,7 +51,7 @@ export const Header = () => {
           >
             <Link
               href={item.href}
-              className="relative group px-4 py-3 text-sm font-medium transition-colors duration-300"
+              className="relative group px-4 py-3 text-sm font-medium transition-colors duration-300 hover:text-blue-700"
             >
               <span className="relative z-10">{item.name}</span>
               <span className="absolute bottom-2 left-1/2 w-0 h-0.5 bg-blue-700 transition-all duration-300 group-hover:w-4/5 group-hover:left-[10%]"></span>
@@ -55,31 +59,25 @@ export const Header = () => {
           </motion.div>
         ))}
 
+        {/* New "Actualités" Link with Alert */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.5, duration: 0.3 }}
-          className="ml-4"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 * navItems.length, duration: 0.3 }} // Adjust delay to animate after other nav items
+          className="relative" // Make parent relative for absolute positioning of badge
         >
           <Link
-            href="https://ushurutrack-gold.vercel.app/"
-            className="bg-gradient-to-r from-blue-700 to-blue-600 text-white px-6 py-2.5 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all duration-300 hover:from-blue-600 hover:to-blue-700 flex items-center gap-2"
+            href="/news" // This will be your dedicated news/blog page
+            className="relative group px-4 py-3 text-sm font-medium transition-colors duration-300 hover:text-blue-700 flex items-center" // Added flex for icon alignment
           >
-            <span>Espace Agent</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
+            <span className="relative z-10">Actualités</span>
+            {hasNewNews && (
+              <span className="absolute top-2 right-1 transform -translate-y-1/2 translate-x-1/2 bg-red-500 rounded-full h-2.5 w-2.5 flex items-center justify-center animate-pulse">
+                {/* Optional: Add a small dot or count here */}
+                {/* <span className="text-white text-xs font-bold leading-none">!</span> */}
+              </span>
+            )}
+            <span className="absolute bottom-2 left-1/2 w-0 h-0.5 bg-blue-700 transition-all duration-300 group-hover:w-4/5 group-hover:left-[10%]"></span>
           </Link>
         </motion.div>
       </nav>
