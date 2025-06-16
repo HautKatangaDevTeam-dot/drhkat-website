@@ -2,6 +2,8 @@ import { ArticleDisplay } from "@/components/ArticleDisplay";
 import Link from "next/link";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 
+export const dynamicParams = true;
+
 const articles = [
   {
     slug: "ouverture-nouveau-bureau-fiscal",
@@ -124,18 +126,15 @@ const articles = [
   },
 ];
 
+// ✅ Required for static generation
 export async function generateStaticParams() {
   return articles.map((article) => ({
     slug: article.slug,
   }));
 }
 
-interface PageProps {
-  params: {
-    slug: string;
-  };
-}
-export default async function ArticlePage({ params }: PageProps) {
+// ✅ Corrected prop typing — don't use a custom interface unless extending correctly
+export default async function Page({ params }: { params: { slug: string } }) {
   const article = articles.find((a) => a.slug === params.slug);
 
   if (!article) {
