@@ -134,15 +134,11 @@ const getArticleBySlug = async (slug: string) => {
   return articles.find((article) => article.slug === slug);
 };
 
-// Define the type for the props explicitly using PageProps
-interface ArticlePageProps {
-  params: {
-    slug: string;
-  };
-}
-
-// This is an async Server Component, which is allowed and ideal for data fetching
-export default async function ArticlePage({ params }: ArticlePageProps) {
+export default async function ArticlePage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const article = await getArticleBySlug(params.slug);
 
   if (!article) {
@@ -169,7 +165,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   return (
     <main className="flex min-h-screen flex-col bg-gray-50 py-16 md:py-24">
       <div className="max-w-4xl mx-auto px-6">
-        {/* Render the Client Component and pass the fetched article data as a prop */}
         <ArticleDisplay article={article} />
       </div>
     </main>
