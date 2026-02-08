@@ -1,0 +1,71 @@
+/* Minimal overrides for Botpress Webchat.
+   Note: class names can differ between versions; these are the common ones. */
+
+:root {
+  --drhkat-blue: #1d4ed8;
+  --drhkat-blue-600: #2563eb;
+  --drhkat-slate-900: #0f172a;
+  --drhkat-slate-700: #334155;
+  --drhkat-slate-200: #e2e8f0;
+}
+
+/* Launcher position and size */
+.bpw-widget-btn,
+.bpw-widget-btn-container {
+  right: 18px !important;
+  bottom: max(18px, env(safe-area-inset-bottom)) !important;
+  z-index: 60 !important;
+}
+
+.bpw-widget-btn {
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 14px !important;
+  box-shadow: 0 10px 20px rgba(2, 6, 23, 0.12) !important;
+  background: var(--drhkat-blue) !important;
+}
+
+/* Try to keep the frame clean/minimal */
+.bpw-layout {
+  border-radius: 16px !important;
+  border: 1px solid var(--drhkat-slate-200) !important;
+  box-shadow: 0 20px 40px rgba(2, 6, 23, 0.14) !important;
+}
+
+.bpw-header {
+  background: #ffffff !important;
+  border-bottom: 1px solid var(--drhkat-slate-200) !important;
+}
+
+.bpw-header-name {
+  color: var(--drhkat-slate-900) !important;
+}
+
+.bpw-header-subtitle {
+  color: var(--drhkat-slate-700) !important;
+}
+
+.bpw-from-bot .bpw-chat-bubble {
+  background: #f8fafc !important;
+  color: var(--drhkat-slate-900) !important;
+  border: 1px solid var(--drhkat-slate-200) !important;
+}
+
+.bpw-from-user .bpw-chat-bubble {
+  background: var(--drhkat-blue) !important;
+  color: #ffffff !important;
+}
+
+.bpw-composer {
+  border-top: 1px solid var(--drhkat-slate-200) !important;
+}
+
+/* Mobile: don't show the widget at all (keeps it from covering content) */
+@media (max-width: 640px) {
+  .bpw-widget-btn,
+  .bpw-widget-btn-container,
+  .bpw-layout {
+    display: none !important;
+  }
+}
+
