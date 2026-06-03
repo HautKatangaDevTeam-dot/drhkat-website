@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "Direction des Recettes du Haut-Katanga (DRHKAT)",
     description:
       "Service public provincial charge de la mobilisation des recettes (impots, taxes, droits, redevances) pour financer le developpement du Haut-Katanga.",
-    url: "https://www.drhkat.cd",
+    url: "www.bank.edrhkat.com",
     siteName: "DRHKAT",
     type: "website",
   },
@@ -53,7 +53,6 @@ export const metadata: Metadata = {
     title: "Direction des Recettes du Haut-Katanga (DRHKAT)",
     description:
       "Mobilisation des recettes provinciales pour financer le developpement du Haut-Katanga.",
-    url: "https://www.bank.edrhkat.com",
     creator: "@HautKatangaDevTeam",
   },
 };
