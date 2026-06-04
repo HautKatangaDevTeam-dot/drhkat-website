@@ -96,7 +96,7 @@ export const OfficesSection = () => (
                       Voir sur la carte
                     </Link>
                     <Link
-                      href="mailto:info@drhkat.cd?subject=Adresse%20et%20orientation%20-%20DRHKAT"
+                      href="mailto:div.info@edrhkat.com?subject=Adresse%20et%20orientation%20-%20DRHKAT"
                       className="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50"
                     >
                       Contacter
@@ -213,7 +213,7 @@ export const OfficesSection = () => (
                 Carte provinciale
               </Link>
               <Link
-                href="mailto:info@drhkat.cd?subject=Orientation%20-%20Bureaux%20DRHKAT"
+                href="mailto:div.info@edrhkat.com?subject=Orientation%20-%20Bureaux%20DRHKAT"
                 className="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50"
               >
                 Écrire à la DRHKAT
@@ -266,7 +266,7 @@ export const OfficesSection = () => (
               Carte du siège
             </Link>
             <Link
-              href="mailto:info@drhkat.cd?subject=Adresse%20d%27un%20bureau%20-%20DRHKAT"
+              href="mailto:div.info@edrhkat.com?subject=Adresse%20d%27un%20bureau%20-%20DRHKAT"
               className="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50"
             >
               Demander une adresse

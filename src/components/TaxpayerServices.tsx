@@ -35,8 +35,8 @@ const servicesData = [
 
 const divisions = [
   {
-    title: "Impôts",
-    desc: "Impôt foncier, IRL et autres impôts provinciaux.",
+    title: "Taxes",
+    desc: "Taxes provinciales et obligations associées.",
     icon: BanknotesIcon,
   },
   {
@@ -52,7 +52,7 @@ const divisions = [
 ] as const;
 
 export const TaxpayerServices = () => (
-  <section id="services" className="bg-white py-20 sm:py-24">
+  <section id="services" className="bg-white py-24 sm:py-28">
     <Container>
       <div className="mb-10 sm:mb-12">
         <SectionHeader
@@ -64,11 +64,11 @@ export const TaxpayerServices = () => (
           }
           align="left"
           title="Services aux contribuables"
-          description="Orientation, démarches et accès aux informations utiles."
+          description="Orientation et démarches."
         />
       </div>
 
-      <div className="grid gap-10 lg:grid-cols-12 lg:items-start">
+      <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
         <div className="lg:col-span-8">
 
           <div className="grid gap-6 md:grid-cols-3">
@@ -77,13 +77,10 @@ export const TaxpayerServices = () => (
             ))}
           </div>
 
-          <div className="mt-10">
-            <h3 className="text-lg font-semibold text-slate-900">
-              Divisions principales
-            </h3>
+          <div className="mt-12">
+            <h3 className="text-lg font-semibold text-slate-900">Divisions principales</h3>
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-600">
-              La DRHKAT s&apos;organise en divisions spécialisées pour la mobilisation des recettes
-              provinciales et l&apos;accompagnement des citoyens.
+              La DRHKAT s&apos;organise en divisions spécialisées.
             </p>
 
             <div className="mt-6 grid gap-4 md:grid-cols-3">
@@ -128,17 +125,16 @@ export const TaxpayerServices = () => (
             </div>
             <div>
               <h3 className="text-lg font-semibold text-slate-900">
-                Besoin d&apos;orientation ?
+                Contact
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                Pour une demande officielle ou un accompagnement, contactez la DRHKAT. Indiquez votre
-                situation (impôts, taxes, documents de bord, recouvrement) et votre commune.
+                Contact
               </p>
               <a
-                href="mailto:info@drhkat.cd?subject=Demande%20d%27orientation%20-%20DRHKAT"
+                href="mailto:div.info@edrhkat.com?subject=Demande%20d%27orientation%20-%20DRHKAT"
                 className="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-blue-700 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-800 sm:w-auto"
               >
-                Écrire à info@drhkat.cd
+                Envoyer un email
               </a>
               <p className="mt-4 text-xs leading-relaxed text-slate-500">
                 Horaires: lundi à vendredi, 7h30 à 16h00.

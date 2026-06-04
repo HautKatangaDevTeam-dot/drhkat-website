@@ -23,7 +23,6 @@ export const metadata: Metadata = {
     "DRHKAT",
     "Haut-Katanga",
     "Direction des Recettes",
-    "Impôts",
     "Taxes",
     "RDC",
     "Lubumbashi",
@@ -43,8 +42,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Direction des Recettes du Haut-Katanga (DRHKAT)",
     description:
-      "Service public provincial charge de la mobilisation des recettes (impots, taxes, droits, redevances) pour financer le developpement du Haut-Katanga.",
-    url: "www.bank.edrhkat.com",
+      "Service public provincial charge de la mobilisation des taxes, droits et redevances pour financer le developpement du Haut-Katanga.",
+    url: "https://edrhkat-hk.com",
     siteName: "DRHKAT",
     type: "website",
   },
@@ -52,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Direction des Recettes du Haut-Katanga (DRHKAT)",
     description:
-      "Mobilisation des recettes provinciales pour financer le developpement du Haut-Katanga.",
+      "Mobilisation des taxes provinciales pour financer le developpement du Haut-Katanga.",
     creator: "@HautKatangaDevTeam",
   },
 };

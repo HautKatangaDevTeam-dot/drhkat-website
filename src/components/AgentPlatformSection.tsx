@@ -52,7 +52,7 @@ export const AgentPlatformSection = () => (
         </h2>
         <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
           Accédez aux plateformes sécurisées dédiées à la gestion fiscale et au
-          reporting institutionnel pour les agents de la DRHKAT.
+          reporting institutionnel pour les agents autorisés de la DRHKAT.
         </p>
       </motion.div>
 
@@ -68,19 +68,19 @@ export const AgentPlatformSection = () => (
           <div className="p-8 md:p-12 bg-blue-900 text-white flex flex-col items-center text-center">
             <h3 className="text-3xl font-bold mb-4 flex items-center gap-3">
               <CheckCircleIcon className="w-8 h-8 text-green-300 flex-shrink-0" />
-              EDRHKAT
+              Recouvrement sécurisé
             </h3>
             <p className="text-blue-200 text-lg mb-6 max-w-sm">
-              Votre solution centralisée pour le suivi des revenus, la collecte
+              Votre solution interne pour le suivi des revenus, la collecte
               efficace et la conformité fiscale en temps réel.
             </p>
             <Link
-              href="https://ushurutrack-gold.vercel.app/"
+              href="https://bank.edrhkat.com"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 bg-white text-blue-900 px-8 py-3 rounded-full font-bold shadow-md hover:bg-blue-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 inline-flex items-center gap-2"
             >
-              Accéder à EDRHKAT
+              Accéder au recouvrement
               <ArrowTopRightOnSquareIcon className="w-5 h-5" />
             </Link>
           </div>
@@ -123,7 +123,7 @@ export const AgentPlatformSection = () => (
               générez des synthèses pour une prise de décision éclairée.
             </p>
             <Link
-              href="https://reporting.drhkat.cd" // Replace with actual Reporting Platform domain
+              href="https://bank.edrhkat.com"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 bg-white text-purple-900 px-8 py-3 rounded-full font-bold shadow-md hover:bg-purple-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 inline-flex items-center gap-2"
@@ -178,7 +178,7 @@ export const AgentPlatformSection = () => (
             Appeler le Support
           </Link>
           <Link
-            href="mailto:support@drhkat.cd"
+            href="mailto:div.info@edrhkat.com"
             className="inline-flex items-center justify-center bg-blue-700 hover:bg-blue-800 text-white px-8 py-4 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-opacity-75"
           >
             <EnvelopeIcon className="w-6 h-6 mr-3" />

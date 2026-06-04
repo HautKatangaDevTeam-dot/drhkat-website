@@ -8,6 +8,7 @@ import { FaqSection } from "@/components/FaqSection";
 import { Footer } from "@/components/Footer";
 import { QuickServicesStrip } from "@/components/QuickServicesStrip";
 import { MissionSection } from "@/components/MissionSection";
+import { PlatformsSection } from "@/components/PlatformsSection";
 
 // Main Page Component
 export default function HomePage() {
@@ -17,6 +18,7 @@ export default function HomePage() {
       <QuickServicesStrip />
       {/* <AnnouncementsSection /> */}
       <MissionSection />
+      <PlatformsSection />
       <OnlineServicesSection />
       <TaxpayerServices />
       <OfficesSection />

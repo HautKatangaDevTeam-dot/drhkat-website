@@ -14,6 +14,7 @@ export const Header = () => {
     { name: "Lois & Régulations", href: "#laws" },
     { name: "FAQ", href: "#faq" },
   ];
+  const internalPlatformUrl = "https://bank.edrhkat.com";
 
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeHref, setActiveHref] = useState<string>("#services");
@@ -71,8 +72,8 @@ export const Header = () => {
         <Container className="py-2">
           <div className="flex items-center justify-between gap-6 text-xs">
             <div className="flex items-center gap-6">
-              <a className="hover:text-white" href="mailto:info@drhkat.cd">
-                info@drhkat.cd
+              <a className="hover:text-white" href="mailto:div.info@edrhkat.com">
+                div.info@edrhkat.com
               </a>
               <span className="text-slate-300">
                 Heures: Lun - Ven 7h30 - 16h00
@@ -80,12 +81,20 @@ export const Header = () => {
             </div>
             <div className="flex items-center gap-4">
               <Link
-                href="https://ushurutrack-gold.vercel.app/"
+                href="https://edrhkat-hk.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-200 hover:text-white"
               >
-                Plateforme EDRHKAT
+                Portail
+              </Link>
+              <Link
+                href={internalPlatformUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border border-slate-600 px-3 py-1 text-slate-200 hover:border-slate-400 hover:text-white"
+              >
+                Accès interne sécurisé
               </Link>
             </div>
           </div>
@@ -192,6 +201,15 @@ export const Header = () => {
                     {item.name}
                   </Link>
                 ))}
+                <Link
+                  href={internalPlatformUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileOpen(false)}
+                  className="rounded-xl border border-blue-200 bg-blue-50 px-3 py-2 text-center text-sm font-semibold text-blue-800 hover:bg-blue-100"
+                >
+                  Accès interne sécurisé
+                </Link>
                 <Link
                   href="#contact"
                   onClick={() => setMobileOpen(false)}

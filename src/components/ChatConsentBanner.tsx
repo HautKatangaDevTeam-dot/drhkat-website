@@ -45,9 +45,9 @@ export function ChatConsentBanner() {
           <p className="font-semibold text-slate-900">Assistant virtuel</p>
           <p className="mt-1 leading-relaxed">
             Pour activer le chat, nous devons charger un service tiers (Botpress).
-            Les reponses sont indicatives. Pour une demande officielle, utilisez{" "}
-            <a className="font-semibold text-blue-700 hover:text-blue-800" href="mailto:info@drhkat.cd">
-              info@drhkat.cd
+            Pour une demande officielle, utilisez{" "}
+            <a className="font-semibold text-blue-700 hover:text-blue-800" href="mailto:div.info@edrhkat.com">
+              div.info@edrhkat.com
             </a>
             .
           </p>

@@ -14,7 +14,7 @@ import { SectionHeader } from "./ui/SectionHeader";
 const points = [
   {
     title: "Mobilisation des recettes",
-    desc: "Gestion et collecte des impôts, taxes, droits et redevances provinciaux.",
+    desc: "Gestion et collecte des taxes, droits et redevances provinciaux.",
     icon: BanknotesIcon,
   },
   {
@@ -85,14 +85,12 @@ export function MissionSection() {
               <SectionHeader
                 align="left"
                 title="Notre mission"
-                description="Service public provincial, doté d&apos;une autonomie administrative et financière, opérant sous la tutelle du Ministère provincial des Finances."
+                description="Service public provincial sous la tutelle du Ministère provincial des Finances."
               />
             </div>
 
             <p className="mb-6 text-sm leading-relaxed text-slate-600">
-              La DRHKAT est l&apos;un des moteurs économiques du Haut-Katanga. Avant le découpage de 2015,
-              la direction était connue sous le nom de DRKAT. Aujourd&apos;hui, elle contribue à maintenir
-              la province parmi les plus productives de la RDC, notamment grâce à l&apos;activité minière.
+              Direction des Recettes du Haut-Katanga.
             </p>
 
             <div className="grid gap-4">

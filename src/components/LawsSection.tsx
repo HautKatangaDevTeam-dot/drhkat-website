@@ -41,7 +41,7 @@ const lawsData = [
   {
     title: "Code Fiscal Provincial",
     description:
-      "Régime fiscal applicable et procédures de recouvrement des impôts provinciaux dans le Haut-Katanga.",
+      "Régime fiscal applicable et procédures de recouvrement des taxes provinciales dans le Haut-Katanga.",
   },
   {
     title: "Arrêté Provincial N°01/2024",
@@ -106,7 +106,7 @@ export const LawsSection = () => (
                   </p>
 
                   <a
-                    href={`mailto:info@drhkat.cd?subject=${encodeURIComponent(
+                    href={`mailto:div.info@edrhkat.com?subject=${encodeURIComponent(
                       `Demande de document: ${law.title}`
                     )}`}
                     className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-blue-700 hover:text-blue-800"
@@ -141,13 +141,13 @@ export const LawsSection = () => (
               </p>
               <a
                 className="mt-5 inline-flex items-center justify-center rounded-xl bg-blue-700 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-800"
-                href="mailto:info@drhkat.cd?subject=Demande%20de%20texte%20legal%20-%20DRHKAT"
+                href="mailto:div.info@edrhkat.com?subject=Demande%20de%20texte%20legal%20-%20DRHKAT"
               >
                 Demander un document
                 <ArrowDownTrayIcon className="ml-2 h-4 w-4" />
               </a>
               <p className="mt-4 text-xs leading-relaxed text-slate-500">
-                Astuce: indiquez la période, la commune/ville concernée et le contexte (impôt, taxe, recouvrement).
+                Astuce: indiquez la période, la commune/ville concernée et le contexte (taxe, recouvrement).
               </p>
             </div>
           </div>

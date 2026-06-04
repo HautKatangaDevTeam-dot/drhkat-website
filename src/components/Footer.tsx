@@ -24,8 +24,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-slate-600">
-              Direction des Recettes du Haut-Katanga. Informations et ressources
-              officielles.
+              Direction des Recettes du Haut-Katanga.
             </p>
           </div>
 
@@ -41,10 +40,10 @@ export function Footer() {
                 Av. Kasaï et Moero (ex immeuble Granat), Lubumbashi
               </a>
               <a
-                href="mailto:info@drhkat.cd"
+                href="mailto:div.info@edrhkat.com"
                 className="block hover:text-slate-900"
               >
-                info@drhkat.cd
+                div.info@edrhkat.com
               </a>
             </div>
           </div>
@@ -71,18 +70,18 @@ export function Footer() {
             <h3 className="text-sm font-semibold text-slate-900">Plateformes</h3>
             <div className="mt-3 flex flex-col gap-2 text-sm">
               <Link
-                href="https://ushurutrack-gold.vercel.app/"
+                href="https://bank.edrhkat.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-600 hover:text-slate-900"
               >
-                Plateforme EDRHKAT
+                Accès interne sécurisé
               </Link>
               <Link
-                href="mailto:support@drhkat.cd"
+                href="mailto:div.info@edrhkat.com"
                 className="text-slate-600 hover:text-slate-900"
               >
-                Support
+                IT
               </Link>
             </div>
           </div>

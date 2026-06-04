@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function HeroContent() {
   const highlights = [
-    "Service public provincial (autonomie administrative et financière).",
+    "Service public provincial.",
     "Tutelle: Ministère provincial des Finances.",
     "Siège: intersection avenues Kasaï et Moero, Lubumbashi (ancien immeuble Granat).",
   ] as const;
@@ -38,16 +38,15 @@ export function HeroContent() {
           className="text-center lg:text-left"
         >
           <div className="mb-6 inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm">
-            Direction des Recettes du Haut-Katanga (DRHKAT)
+            DRHKAT
           </div>
 
           <h1 className="text-4xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-5xl">
-            Mobiliser les recettes, financer le développement
+            Pour une mobilisation efficace des taxes
           </h1>
 
           <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-slate-600 lg:mx-0">
-            La DRHKAT collecte les impôts, taxes, droits et redevances provinciaux. Ces recettes
-            contribuent au financement des routes, écoles et infrastructures du Haut-Katanga.
+            Direction des Recettes du Haut-Katanga.
           </p>
 
           <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
@@ -55,13 +54,13 @@ export function HeroContent() {
               href="#services"
               className="rounded-xl bg-blue-700 px-6 py-3 text-center text-sm font-semibold text-white hover:bg-blue-800"
             >
-              Découvrir nos services
+              Consulter les services
             </Link>
             <Link
               href="#laws"
               className="rounded-xl border border-slate-300 bg-white px-6 py-3 text-center text-sm font-semibold text-slate-900 hover:bg-slate-50"
             >
-              Textes légaux
+              Textes officiels
             </Link>
           </div>
 
@@ -169,7 +168,7 @@ export function HeroContent() {
               </div>
               <div>
                 <h3 className="text-sm font-semibold text-slate-900">Accès rapide</h3>
-                <p className="text-xs text-slate-600">Liens utiles</p>
+                <p className="text-xs text-slate-600">Services publics et accès interne</p>
               </div>
               <Link
                 href="#online-services"

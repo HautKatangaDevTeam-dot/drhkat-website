@@ -18,13 +18,13 @@ export function AnnouncementsSection() {
     // In a real application, you would fetch this from an API.
     // For now, static data representing current DRHKAT announcements.
     setAnnouncements([
-      {
-        title: "Nouvelle date limite pour la déclaration trimestrielle!",
-        description:
-          "La date limite pour la déclaration trimestrielle des impôts fonciers est reportée au 30 juillet 2025. Assurez-vous de soumettre vos documents à temps.",
-        date: "16 juin 2025",
-        link: "/actualites/declaration-trimestrielle-report",
-      },
+        {
+          title: "Nouvelle date limite pour la déclaration trimestrielle!",
+          description:
+          "La date limite pour la déclaration trimestrielle des taxes foncières est reportée au 30 juillet 2025. Assurez-vous de soumettre vos documents à temps.",
+          date: "16 juin 2025",
+          link: "/actualites/declaration-trimestrielle-report",
+        },
       {
         title: "Recouvrement forcé imminent",
         description:

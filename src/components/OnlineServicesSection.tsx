@@ -14,12 +14,13 @@ import { Container } from "./ui/Container";
 import { SectionHeader } from "./ui/SectionHeader";
 
 export function OnlineServicesSection() {
+  const internalPlatformUrl = "https://bank.edrhkat.com";
   return (
-    <section id="online-services" className="bg-slate-50 py-16 sm:py-20">
+    <section id="online-services" className="bg-slate-50 py-24 sm:py-28">
       <Container>
-        <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
           <div>
-            <div className="mb-10 sm:mb-12">
+            <div className="mb-12 sm:mb-14">
               <SectionHeader
                 eyebrow={
                   <span className="inline-flex items-center gap-2">
@@ -28,8 +29,8 @@ export function OnlineServicesSection() {
                   </span>
                 }
                 align="left"
-                title="Accès rapide"
-                description="Accès aux plateformes et aux futurs services de déclaration et paiement en ligne (déploiement progressif)."
+                title="Services numériques"
+                description="Accès aux services et aux plateformes de la DRHKAT."
               />
             </div>
 
@@ -46,29 +47,33 @@ export function OnlineServicesSection() {
                     <SparklesIcon className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-slate-900">
-                      EDRHKAT: déclaration & paiement (en préparation)
-                    </h3>
+                    <h3 className="text-lg font-semibold text-slate-900">Portail</h3>
                     <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                      Plateforme de gestion et de suivi dédiée à la mobilisation des recettes:
-                      déclaration, paiement, suivi des obligations et assistance. L&apos;accès est
-                      ouvert progressivement selon votre profil.
+                      Informations, suivi des obligations et assistance.
                     </p>
                     <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center">
                       <Link
-                        href="https://ushurutrack-gold.vercel.app/"
+                        href="https://edrhkat-hk.com/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-700 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-800"
                       >
-                        Accéder à EDRHKAT
+                        Ouvrir
+                      </Link>
+                      <Link
+                        href={internalPlatformUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+                      >
+                        Accès interne sécurisé
                         <ArrowTopRightOnSquareIcon className="h-4 w-4" />
                       </Link>
                       <a
-                        href="mailto:info@drhkat.cd?subject=Ouverture%20EDRHKAT%20-%20declaration%20et%20paiement"
+                        href="mailto:div.info@edrhkat.com"
                         className="inline-flex items-center gap-2 text-sm font-semibold text-blue-700 hover:text-blue-800"
                       >
-                        Être informé
+                        Contact
                       </a>
                     </div>
                   </div>
@@ -128,38 +133,6 @@ export function OnlineServicesSection() {
                 </div>
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 14 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.5, delay: 0.06 }}
-                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:col-span-2"
-              >
-                <h3 className="text-lg font-semibold text-slate-900">Comment ça marche</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                  Une experience simple, avec un deploiement progressif des services en ligne.
-                </p>
-                <div className="mt-5 grid gap-3 sm:grid-cols-3">
-                  <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                    <div className="text-xs font-semibold text-slate-900">1. S&apos;identifier</div>
-                    <div className="mt-1 text-xs text-slate-600">
-                      Acces selon profil (contribuable / agent).
-                    </div>
-                  </div>
-                  <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                    <div className="text-xs font-semibold text-slate-900">2. Declarer</div>
-                    <div className="mt-1 text-xs text-slate-600">
-                      Saisie et controle des informations.
-                    </div>
-                  </div>
-                  <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                    <div className="text-xs font-semibold text-slate-900">3. Payer & suivre</div>
-                    <div className="mt-1 text-xs text-slate-600">
-                      Paiement et suivi des obligations.
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
             </div>
           </div>
 
@@ -168,7 +141,7 @@ export function OnlineServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5 }}
-            className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5"
+                className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5 lg:sticky lg:top-28"
           >
             {/* Framed split-panel (variation vs hero) */}
             <div className="grid gap-4 lg:grid-cols-5">

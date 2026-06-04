@@ -9,7 +9,7 @@ import { SectionHeader } from "./ui/SectionHeader";
 const roadmap = [
   {
     title: "Déclaration et paiement en ligne",
-    desc: "Déclaration, paiement et suivi des obligations via EDRHKAT (déploiement progressif).",
+    desc: "Déclaration, paiement et suivi des obligations via le portail public officiel (déploiement progressif).",
     status: "En préparation",
   },
   {
@@ -46,7 +46,7 @@ export const FutureServicesSection = () => (
                 }
                 align="left"
                 title="Services futurs"
-                description="Modernisation progressive des services pour simplifier les démarches des contribuables."
+                description="Modernisation progressive des services pour simplifier les démarches des utilisateurs du portail public."
               />
             </div>
 
@@ -106,8 +106,8 @@ export const FutureServicesSection = () => (
               <div className="font-semibold text-slate-900">Déploiement progressif</div>
               <p className="mt-2 text-sm leading-relaxed text-slate-700">
                 Les fonctionnalités seront ouvertes progressivement. Pour être informé, écrivez à{" "}
-                <a className="font-semibold text-blue-700 hover:text-blue-800" href="mailto:info@drhkat.cd">
-                  info@drhkat.cd
+                <a className="font-semibold text-blue-700 hover:text-blue-800" href="mailto:div.info@edrhkat.com">
+                  div.info@edrhkat.com
                 </a>
                 .
               </p>
