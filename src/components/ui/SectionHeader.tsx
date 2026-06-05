@@ -18,7 +18,7 @@ export function SectionHeader({
       {eyebrow ? (
         <div
           className={[
-            "mb-4 inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm",
+            "mb-3 inline-flex items-center text-xs font-semibold uppercase tracking-[0.18em] text-slate-500",
             align === "left" ? "" : "",
           ].join(" ")}
         >

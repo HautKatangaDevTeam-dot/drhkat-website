@@ -5,7 +5,7 @@ import { Header } from "./Header";
 import { HeroContent } from "./HeroContent";
 
 export const HeroSection = () => (
-  <section className="relative w-full min-h-[72vh] flex flex-col bg-white overflow-hidden">
+  <section className="relative w-full min-h-[62vh] flex flex-col bg-white overflow-hidden sm:min-h-[72vh]">
     {/* Clean, professional background */}
     <div className="absolute inset-0 overflow-hidden">
       {/* Subtle blue gradient overlay */}
@@ -15,37 +15,37 @@ export const HeroSection = () => (
       <div className="absolute top-0 left-0 w-full h-full bg-[url('/pattern-grid.svg')] opacity-[0.01]"></div>
 
       {/* Minimal blue accents */}
-      <div className="absolute top-10 -left-20 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
-      <div className="absolute top-1/2 -right-24 w-80 h-80 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-15"></div>
-      <div className="absolute bottom-20 left-1/4 w-60 h-60 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
+      <div className="absolute top-10 -left-20 hidden h-64 w-64 rounded-full bg-blue-100 opacity-20 mix-blend-multiply blur-3xl sm:block"></div>
+      <div className="absolute top-1/2 -right-24 hidden h-80 w-80 rounded-full bg-blue-200 opacity-15 mix-blend-multiply blur-3xl sm:block"></div>
+      <div className="absolute bottom-20 left-1/4 hidden h-60 w-60 rounded-full bg-blue-300 opacity-10 mix-blend-multiply blur-3xl md:block"></div>
 
       {/* Clean geometric shapes */}
-      <div className="absolute top-32 right-32 w-40 h-40 bg-blue-50/30 rounded-2xl rotate-12"></div>
-      <div className="absolute bottom-32 left-32 w-24 h-24 bg-blue-100/20 rounded-full"></div>
+      <div className="absolute top-32 right-32 hidden h-40 w-40 rounded-2xl bg-blue-50/30 rotate-12 lg:block"></div>
+      <div className="absolute bottom-32 left-32 hidden h-24 w-24 rounded-full bg-blue-100/20 lg:block"></div>
     </div>
 
     {/* Header */}
     <Header />
 
     {/* Main Content Area */}
-    <div className="relative flex-1 flex items-start justify-center pt-10 pb-16 sm:pt-12 sm:pb-20">
+    <div className="relative flex-1 flex items-start justify-center px-0 pt-8 pb-12 sm:pt-12 sm:pb-20">
       <HeroContent />
     </div>
 
     {/* Elegant Scrolling Indicator */}
-    <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 z-10">
+    <div className="absolute bottom-4 left-1/2 z-10 -translate-x-1/2 sm:bottom-5">
       <motion.div
-        className="flex flex-col items-center gap-3"
+        className="flex flex-col items-center gap-2 sm:gap-3"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.5, duration: 0.5 }}
       >
-        <span className="text-sm text-blue-600/80 font-medium tracking-wide">
+        <span className="text-xs font-medium tracking-wide text-blue-600/80 sm:text-sm">
           Explorer nos services
         </span>
-        <div className="w-6 h-10 border-2 border-blue-600/50 rounded-full flex items-start justify-center p-1">
+        <div className="flex h-8 w-5 items-start justify-center rounded-full border-2 border-blue-600/50 p-1 sm:h-10 sm:w-6">
           <motion.div
-            className="w-1.5 h-1.5 bg-blue-600 rounded-full"
+            className="h-1.5 w-1.5 rounded-full bg-blue-600"
             animate={{ y: [0, 16, 0] }}
             transition={{
               duration: 2,

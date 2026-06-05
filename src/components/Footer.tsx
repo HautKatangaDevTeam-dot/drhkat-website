@@ -1,8 +1,69 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
+
+function SocialIcon({ children }: { children: ReactNode }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className="h-4 w-4"
+    >
+      {children}
+    </svg>
+  );
+}
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const socialLinks = [
+    {
+      label: "Facebook",
+      href: "#",
+      icon: () => (
+        <SocialIcon>
+          <path d="M17 2h-3c-2.2 0-4 1.8-4 4v3H7v4h3v9h4v-9h3l1-4h-4V6c0-.6.4-1 1-1h3V2z" />
+        </SocialIcon>
+      ),
+    },
+    {
+      label: "X",
+      href: "#",
+      icon: () => (
+        <SocialIcon>
+          <path d="M5 5l14 14" />
+          <path d="M19 5L5 19" />
+        </SocialIcon>
+      ),
+    },
+    {
+      label: "YouTube",
+      href: "#",
+      icon: () => (
+        <SocialIcon>
+          <rect x="3.5" y="6.5" width="17" height="11" rx="3" />
+          <path d="M10 15l5-3-5-3v6z" />
+        </SocialIcon>
+      ),
+    },
+    {
+      label: "LinkedIn",
+      href: "#",
+      icon: () => (
+        <SocialIcon>
+          <path d="M6 9v9" />
+          <path d="M6 6.5h.01" />
+          <path d="M10 18v-5.5c0-1.4 1.1-2.5 2.5-2.5S15 11.1 15 12.5V18" />
+          <path d="M19 18v-4.5c0-1.9-1.6-3.5-3.5-3.5S12 11.6 12 13.5V18" />
+        </SocialIcon>
+      ),
+    },
+  ] as const;
 
   return (
     <footer id="contact" className="border-t border-slate-200 bg-white">
@@ -97,13 +158,27 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-slate-200 pt-6 text-xs text-slate-500 sm:flex-row">
           <p>© {currentYear} DRHKAT. Tous droits réservés.</p>
-          <div className="flex items-center gap-4">
-            <Link href="/privacy-policy" className="hover:text-slate-900">
-              Politique de confidentialité
-            </Link>
-            <Link href="/terms-of-service" className="hover:text-slate-900">
-              Conditions générales
-            </Link>
+          <div className="flex flex-col items-center gap-4 sm:flex-row">
+            <div className="flex items-center gap-2">
+              {socialLinks.map((social) => (
+                <Link
+                  key={social.label}
+                  href={social.href}
+                  aria-label={social.label}
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 hover:border-slate-300 hover:text-slate-900"
+                >
+                  <social.icon />
+                </Link>
+              ))}
+            </div>
+            <div className="flex items-center gap-4">
+              <Link href="/privacy-policy" className="hover:text-slate-900">
+                Politique de confidentialité
+              </Link>
+              <Link href="/terms-of-service" className="hover:text-slate-900">
+                Conditions générales
+              </Link>
+            </div>
           </div>
         </div>
       </div>

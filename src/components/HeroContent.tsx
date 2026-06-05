@@ -37,10 +37,6 @@ export function HeroContent() {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="text-center lg:text-left"
         >
-          <div className="mb-6 inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm">
-            DRHKAT
-          </div>
-
           <h1 className="text-4xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-5xl">
             Pour une mobilisation efficace des taxes
           </h1>
@@ -106,13 +102,6 @@ export function HeroContent() {
           </motion.div>
 
           {/* Top-left status badge */}
-          <motion.div
-            variants={fadeUp}
-            className="absolute left-4 top-4 rounded-full border border-white/30 bg-white/75 px-4 py-2 text-xs font-semibold text-slate-900 backdrop-blur"
-          >
-            Service public provincial
-          </motion.div>
-
           {/* Inset secondary image for variation (desktop only) */}
           <motion.div
             variants={fadeUp}
@@ -128,12 +117,7 @@ export function HeroContent() {
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" />
             </div>
-            <div className="px-4 py-3 text-xs">
-              <div className="font-semibold text-slate-900">Coordination</div>
-              <div className="mt-0.5 text-slate-700">
-                Gouvernance et pilotage des services
-              </div>
-            </div>
+            <div className="px-4 py-3 text-xs font-semibold text-slate-900">Coordination</div>
           </motion.div>
 
           {/* Bottom caption */}
@@ -141,7 +125,7 @@ export function HeroContent() {
             variants={fadeUp}
             className="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/20 bg-white/70 p-4 text-sm text-slate-800 backdrop-blur"
           >
-            Informations officielles et orientation pour les contribuables du Haut-Katanga.
+            Informations officielles.
           </motion.div>
 
           <motion.div
@@ -179,8 +163,8 @@ export function HeroContent() {
             </div>
           </motion.div>
 
-          <div className="pointer-events-none absolute -top-4 -right-4 h-20 w-20 rounded-full bg-blue-100/50" />
-          <div className="pointer-events-none absolute -bottom-4 -left-4 h-24 w-24 rounded-full bg-blue-200/30" />
+          <div className="pointer-events-none absolute -top-4 -right-4 hidden h-20 w-20 rounded-full bg-blue-100/50 lg:block" />
+          <div className="pointer-events-none absolute -bottom-4 -left-4 hidden h-24 w-24 rounded-full bg-blue-200/30 lg:block" />
         </motion.div>
       </div>
     </div>
