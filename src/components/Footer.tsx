@@ -78,6 +78,14 @@ export function Footer() {
                 Accès interne sécurisé
               </Link>
               <Link
+                href="https://mail.edrhkat.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-600 hover:text-slate-900"
+              >
+                Mail sécurisé
+              </Link>
+              <Link
                 href="mailto:div.info@edrhkat.com"
                 className="text-slate-600 hover:text-slate-900"
               >
